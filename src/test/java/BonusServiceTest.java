@@ -6,15 +6,15 @@ class BonusServiceTest {
   void shouldCalculateForRegisteredAndUnderLimit() {
     BonusService service = new BonusService();
 
-    // подготавливаем данные:
+    // РїРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј РґР°РЅРЅС‹Рµ:
     long amount = 1000_60;
     boolean registered = true;
     long expected = 30;
 
-    // вызываем целевой метод:
+    // РІС‹Р·С‹РІР°РµРј С†РµР»РµРІРѕР№ РјРµС‚РѕРґ:
     long actual = service.calculate(amount, registered);
 
-    // производим проверку (сравниваем ожидаемый и фактический):
+    // РїСЂРѕРёР·РІРѕРґРёРј РїСЂРѕРІРµСЂРєСѓ (СЃСЂР°РІРЅРёРІР°РµРј РѕР¶РёРґР°РµРјС‹Р№ Рё С„Р°РєС‚РёС‡РµСЃРєРёР№):
     assertEquals(expected, actual);
   }
 
@@ -22,15 +22,15 @@ class BonusServiceTest {
   void shouldCalculateForRegisteredAndOverLimit() {
     BonusService service = new BonusService();
 
-    // подготавливаем данные:
+    // РїРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј РґР°РЅРЅС‹Рµ:
     long amount = 1_000_000_60;
     boolean registered = true;
     long expected = 500;
 
-    // вызываем целевой метод:
+    // РІС‹Р·С‹РІР°РµРј С†РµР»РµРІРѕР№ РјРµС‚РѕРґ:
     long actual = service.calculate(amount, registered);
 
-    // производим проверку (сравниваем ожидаемый и фактический):
+    // РїСЂРѕРёР·РІРѕРґРёРј РїСЂРѕРІРµСЂРєСѓ (СЃСЂР°РІРЅРёРІР°РµРј РѕР¶РёРґР°РµРјС‹Р№ Рё С„Р°РєС‚РёС‡РµСЃРєРёР№):
     assertEquals(expected, actual);
   }
 
@@ -38,15 +38,15 @@ class BonusServiceTest {
   void shouldCalculateForUnregisteredAndUnderLimit() {
     BonusService service = new BonusService();
 
-    // подготавливаем данные:
+    // РїРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј РґР°РЅРЅС‹Рµ:
     long amount = 1000_60;
     boolean registered = false;
     long expected = 10;
 
-    // вызываем целевой метод:
+    // РІС‹Р·С‹РІР°РµРј С†РµР»РµРІРѕР№ РјРµС‚РѕРґ:
     long actual = service.calculate(amount, registered);
 
-    // производим проверку (сравниваем ожидаемый и фактический):
+    // РїСЂРѕРёР·РІРѕРґРёРј РїСЂРѕРІРµСЂРєСѓ (СЃСЂР°РІРЅРёРІР°РµРј РѕР¶РёРґР°РµРјС‹Р№ Рё С„Р°РєС‚РёС‡РµСЃРєРёР№):
     assertEquals(expected, actual);
   }
 
@@ -54,15 +54,15 @@ class BonusServiceTest {
   void shouldCalculateForUnregisteredAndOverLimit() {
     BonusService service = new BonusService();
 
-    // подготавливаем данные:
+    // РїРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј РґР°РЅРЅС‹Рµ:
     long amount = 1_000_000_60;
     boolean registered = false;
     long expected = 500;
 
-    // вызываем целевой метод:
+    // РІС‹Р·С‹РІР°РµРј С†РµР»РµРІРѕР№ РјРµС‚РѕРґ:
     long actual = service.calculate(amount, registered);
 
-    // производим проверку (сравниваем ожидаемый и фактический):
+    // РїСЂРѕРёР·РІРѕРґРёРј РїСЂРѕРІРµСЂРєСѓ (СЃСЂР°РІРЅРёРІР°РµРј РѕР¶РёРґР°РµРјС‹Р№ Рё С„Р°РєС‚РёС‡РµСЃРєРёР№):
     assertEquals(expected, actual);
   }
 }
