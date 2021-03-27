@@ -2,20 +2,20 @@ public class Main {
   public static void main(String[] args) {
     BonusService service = new BonusService();
 
-    // подготавливаем данные:
+    // РїРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј РґР°РЅРЅС‹Рµ:
     long amount = 1000_60;
     boolean registered = true;
     long expected = 30;
 
-    // вызываем целевой метод:
+    // РїРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј РґР°РЅРЅС‹Рµ:
     long actual = service.calculate(amount, registered);
 
-    // производим проверку (сравниваем ожидаемый и фактический):
-    // если true - то PASS
-    // если false - то FAIL
+    // РїСЂРѕРёР·РІРѕРґРёРј РїСЂРѕРІРµСЂРєСѓ (СЃСЂР°РІРЅРёРІР°РµРј РѕР¶РёРґР°РµРјС‹Р№ Рё С„Р°РєС‚РёС‡РµСЃРєРёР№):
+    // РµСЃР»Рё true - С‚Рѕ PASS
+    // РµСЃР»Рё false - С‚Рѕ FAIL
     boolean passed = expected == actual;
 
-    // выводим результат
+    // РІС‹РІРѕРґРёРј СЂРµР·СѓР»СЊС‚Р°С‚
     System.out.println(passed);
   }
 }
